@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0">
+	<title>VW移动端适配方案</title>
+	<style>
+		/*
+			当在Ip6下时，100vw代表375px,而视觉稿一般是750px,为了方便算，当html上的1rem代表50px时，
+			视觉稿上的像素跟rem就存在了100倍的转化关闭，而此时1vw代表是3.75px，所以html上的font-siez为50/3.75，
+			约等于13.33333vw,这样即使不用scss也是比较利于换算的
+		*/
+		html {background-color: #eee; font-size: 13.33333vw;}
+		.demo1 {width: 100px; height: 100px; background-color: #f10;}
+		.demo2 {width: 2rem; height: 2rem; background-color: #ddd;}
+	</style>
+</head>
+<body>
+
+	<div class="test1">测试rem</div>
+	<div class="test2">测试rem2</div>
+
+	<div class="demo1"></div>
+	<div class="demo2"></div>
+	
+</body>
+</html>

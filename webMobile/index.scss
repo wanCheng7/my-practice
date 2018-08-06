@@ -1,0 +1,16 @@
+@function px2rem ($px) {
+	$rem: 75;
+	@return ($px / $rem) + rem;
+}
+
+@function px ($px) {
+	@return ($px / 100) + rem;
+}
+
+
+html {background-color: #eee; }
+
+.demo1 {width: 100px; height: 100px; background-color: #f10;}
+.demo2 {width: px2rem(200); height: px2rem(200); background-color: #ddd;}
+
+
